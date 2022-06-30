@@ -248,9 +248,9 @@ func (f *conf) formatEnvKey(key string) string {
 // setDefaultValue calls setValue but disallows booleans from
 // being set.
 func (f *conf) setDefaultValue(fv reflect.Value, val string) error {
-	if fv.Kind() == reflect.Bool {
-		return fmt.Errorf("unsupported type: %v", fv.Kind())
-	}
+	//if fv.Kind() == reflect.Bool {
+	//	return fmt.Errorf("unsupported type: %v", fv.Kind())
+	//}
 	return f.setValue(fv, val)
 }
 
